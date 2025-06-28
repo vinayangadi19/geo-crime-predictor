@@ -1,0 +1,13 @@
+import streamlit as st
+import pandas as pd
+
+st.title("🧠 Crime Rate Predictor")
+
+lat = st.number_input("Latitude", value=41.8781)
+lon = st.number_input("Longitude", value=-87.6298)
+hour = st.slider("Hour of Day", 0, 23)
+weekday = st.selectbox("Weekday (0=Monday)", list(range(7)))
+month = st.selectbox("Month", list(range(1, 13)))
+
+if st.button("Predict"):
+    st.success("This is a placeholder prediction. Connect your model here.")
